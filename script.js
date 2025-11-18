@@ -167,36 +167,64 @@ document.addEventListener('DOMContentLoaded', () => {
     attachInputListeners();
     actualizarCarrito();
 
-    /* ------------------------------------------------------
-       BOTONES DE CATEGORÍAS
-    ------------------------------------------------------ */
-    function toggleBoton(id, activo) {
-        const b = document.getElementById(id);
-        if (!b) return;
 
-        b.classList.toggle("boton-activo", activo);
-        b.classList.toggle("boton-inactivo", !activo);
-    }
+    /* -------------------------------
+       ACTIVAR / DESACTIVAR BOTONES
+    --------------------------------*/
+    function activarSoloEsteBoton(id) {
+        // Todos los botones input
+        const botones = document.querySelectorAll(".boton input");
 
-    function configurarBotonCategoria(idBoton, selectorCategoria) {
-        document.getElementById(idBoton).addEventListener("click", () => {
-            const items = document.querySelectorAll(selectorCategoria);
-            let visible = false;
-
-            items.forEach(div => {
-                const esconder = (div.style.display === "" || div.style.display === "none");
-                div.style.display = esconder ? "flex" : "none";
-                visible = esconder;
-            });
-
-            toggleBoton(idBoton, visible);
+        botones.forEach(b => {
+            const activo = (b.id === id);
+            b.classList.toggle("boton-activo", activo);
+            b.classList.toggle("boton-inactivo", !activo);
         });
     }
 
-    configurarBotonCategoria("boton1", "#kits");
-    configurarBotonCategoria("boton2", "#velas");
-    configurarBotonCategoria("boton3", "#humidificadores");
-    configurarBotonCategoria("boton4", "#jabones");
-    configurarBotonCategoria("boton5", "#almohadillas");
+    /* ------------------------------------
+       FUNCIONALIDAD DE FILTRO POR CATEGORÍA
+    -------------------------------------*/
+    function configurarBotonCategoria(idBoton, categoria) {
+        const boton = document.getElementById(idBoton);
+
+        boton.addEventListener("click", () => {
+            const todos = document.querySelectorAll(".inventario");
+            const seleccionados = document.querySelectorAll(`#${categoria}`);
+
+            // ¿Está este botón ya activo?
+            const yaActivo = boton.classList.contains("boton-activo");
+
+            if (yaActivo) {
+                // → Si ya estaba activo, mostrar todo y desactivar botones
+                todos.forEach(div => div.style.display = "flex");
+
+                const btns = document.querySelectorAll(".boton input");
+                btns.forEach(b => {
+                    b.classList.remove("boton-activo");
+                    b.classList.add("boton-inactivo");
+                });
+
+            } else {
+                // → Aplicar filtro: ocultar todos
+                todos.forEach(div => div.style.display = "none");
+
+                // → Mostrar solo la categoría seleccionada
+                seleccionados.forEach(div => div.style.display = "flex");
+
+                // → Activar visualmente solo este botón
+                activarSoloEsteBoton(idBoton);
+            }
+        });
+    }
+
+    /* ---------------------------
+       CONFIGURAR TODOS LOS BOTONES
+    ---------------------------- */
+    configurarBotonCategoria("boton1", "kits");
+    configurarBotonCategoria("boton2", "velas");
+    configurarBotonCategoria("boton3", "humidificadores");
+    configurarBotonCategoria("boton4", "jabones");
+    configurarBotonCategoria("boton5", "almohadillas");
 
 });
