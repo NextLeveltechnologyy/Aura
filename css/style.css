@@ -1,0 +1,310 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 2vw;
+    left: 2vw;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    z-index: 10;
+}
+
+nav {
+    position: fixed;
+    left: -190vw;
+    top: 0;
+    height: 100%;
+    width: 18vw;
+    background: rgba(255, 255, 255, 0.8);
+    padding-top: 7vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: left 0.4s ease;
+    z-index: 9;
+}
+
+nav.active {
+    left: 0;
+}
+
+nav img {
+    width: 10vw;
+    margin-bottom: 3vw;
+    border-radius: 50%;
+    box-shadow: -0px 10px 10px black;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 2vw 0;
+    font-size: 1.8vw;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+button:hover {
+    scale: 1.2;
+    transition: 0.4s;
+    text-decoration: underline;
+}
+
+button {
+    border-style: none;
+    font-size: 1.5vw;
+    box-shadow: -2px 10px 10px black;
+    cursor: pointer;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 1vw;
+    box-shadow: -2px 10px 10px black;
+}
+
+h1 {
+    font-size: 3.5vw;
+    margin-bottom: 2vw;
+}
+
+p {
+    font-size: 2vw;
+    margin: 2vw;
+    padding-bottom: 8vw;
+}
+
+.logo {
+    width: 20vw;
+    margin: 5vw;
+    border-radius: 20%;
+    box-shadow: -0px 10px 10px black;
+}
+
+.logo:hover {
+    scale: 1.1;
+    transition: 0.4s;
+}
+
+#background-video {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+#nosotros {
+    display: flex;
+    text-align: center;
+    box-shadow: 0px 1px 2px rgb(123, 123, 123);
+    margin: 2vw 0 2.2vw 4.5vw;
+    width: 90%;
+    background-color: white;
+    border-radius: 3vw;
+    box-shadow: 1px 1px 10px;
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: 3vw;
+    color: black;
+}
+
+#nosotros img {
+    width: 25vw;
+    height: 20vw;
+    margin: 0;
+}
+
+#nosotros p {
+    padding: 0 0 0 0;
+    color: black;
+}
+
+footer {
+    background-color: rgb(53, 53, 53);
+    justify-items: center;
+    text-align: center;
+    font-size: 2vw;
+    padding: 0.2vw 0 1.5vw 0;
+    box-shadow: -0px -5px 10px black;
+}
+
+#copy {
+    border-style: none;
+    margin-bottom: 2px;
+    padding-bottom: 1vw;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: black;
+    background: linear-gradient(90deg, rgb(109, 109, 109) 0%, rgb(196, 196, 196) 50%, rgb(109, 109, 109) 100%);
+    border-style: solid;
+    transition: 0.3s ease, color 0.3s ease;
+    transform: scale(1.12);
+}
+
+#muestras {
+    background-color: rgba(0, 0, 0, 0.067);
+}
+
+#videof {
+    position: absolute;
+    object-fit: fill;
+    z-index: -1;
+    width: 100vw;
+    height: 35vw;
+}
+
+.boton {
+    justify-self: center;
+    padding: 2vw 0 0 0;
+}
+
+#boton1,
+#boton2,
+#boton3,
+#boton4,
+#boton5 {
+    padding: 1vw 3vw;
+    margin: 0 0.8vw;
+    font-size: 2.5vw;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#boton1:hover,
+#boton2:hover,
+#boton3:hover,
+#boton4:hover,
+#boton5:hover {
+    transition: 0.3s ease, color 0.3s ease;
+    transform: scale(1.12);
+}
+
+.boton-activo {
+    background-color: white;
+    color: black;
+}
+
+.boton-inactivo {
+    background-color: black;
+    color: white;
+}
+
+#inventario_contenedor {
+    display: flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 2.2vw;
+    margin: 2vw 0 2vw 0;
+}
+
+.inventario {
+    text-align: center;
+    background-color: white;
+    color: black;
+    box-shadow: -1px -1px 5px;
+    border-radius: 5%;
+    width: 48vw;
+    height: 30vw;
+}
+
+.producto {
+    display: grid;
+}
+
+/*794x963*/
+.foto img {
+    width: 25vw;
+    height: 28vw;
+    border-style: groove;
+    border-radius: 5%;
+    padding: 1px;
+    margin: 0.6vw 0.6vw 0.6vw 0;
+}
+
+.etiqueta {
+    margin: 2vw;
+}
+
+.inventario input {
+    width: 4vw;
+    height: 4vw;
+    margin: 0 8.5vw;
+}
+
+#cantidad {
+    color: black;
+}
+
+#carrito-flotante {
+    position: fixed;
+    bottom: 9vw;
+    right: 1.5vw;
+    width: 20vw;
+    max-height: 30vw;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    z-index: 100;
+}
+
+#carrito-flotante h3 {
+    margin: 1vw 0;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.item-carrito {
+    color: black;
+    border-bottom: 0.5vw solid #eee;
+    padding: 0.2vw 0;
+    font-size: 2vw;
+}
+
+#whatsapp-btn {
+    display: block;
+    margin: 0 1.2vw;
+    padding: 1.3vw;
+    background: #25D366;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#whatsapp-btn:hover {
+    background: #20b358;
+}
