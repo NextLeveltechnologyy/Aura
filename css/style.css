@@ -316,7 +316,7 @@ footer a:hover {
         top: 2vw;
         left: 2vw;
         padding: 1vw 1vw;
-        font-size: 4.5vw;
+        font-size: 7vw;
     }
 
     .video-container {
@@ -345,16 +345,19 @@ footer a:hover {
 
     nav a {
         margin: 2vw 0;
-        font-size: 4vw;
+        font-size: 4.5vw;
     }
 
     button {
-        font-size: 2.5vw;
+        font-size: 3vw;
+    }
+
+    #background-video {
+        width: 112%;
     }
 
     .content {
-        padding: 0;
-        height: 60vw;
+        height: 65vw;
     }
 
     .content2 {
@@ -362,11 +365,11 @@ footer a:hover {
     }
 
     h1 {
-        font-size: 4.5vw;
+        font-size: 5vw;
     }
 
     p {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
 
     .logo {
@@ -400,13 +403,13 @@ footer a:hover {
 
     #video {
         width: 100vw;
-        height: 35vw;
+        height: 60vw;
     }
 
     #sound-btn {
         position: absolute;
-        top: 55vw;
-        left: 38vw;
+        top: 61vw;
+        left: 36vw;
     }
 
     .boton {
@@ -418,32 +421,31 @@ footer a:hover {
     #boton3,
     #boton4,
     #boton5 {
-        padding: 0.5vw 2vw;
-        margin: 0 0.2vw;
-        font-size: 3vw;
+        padding: 0.2vw 1vw;
+        margin: 0 0.1vw;
+        font-size: 3.5vw;
     }
 
     #inventario_contenedor {
-        margin: 2vw 0 2vw 0;
+        margin: 1.5vw 0 0 0;
     }
 
     .inventario {
         width: 48vw;
-        height: 40vw;
-        font-size: 2.9vw;
+        height: 48vw;
+        font-size: 3vw;
     }
 
     /*794x963*/
     .foto img {
-        width: 22vw;
-        height: 28vw;
-        margin: 5vw 0 0 0;
+        margin: 8vw 0 0 -2vw;
     }
 
     .inventario input {
         width: 7vw;
         height: 6vw;
         font-size: 3vw;
+        margin: 7vw;
     }
 
     #carrito-flotante {
@@ -453,11 +455,11 @@ footer a:hover {
 
     #carrito-flotante h3 {
         margin: 1vw 0;
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
 
     .item-carrito {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
 }
 
