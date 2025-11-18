@@ -1,7 +1,6 @@
 body,
 html {
     margin: 0;
-    padding: 0;
     font-family: sans-serif;
     color: white;
 }
@@ -13,8 +12,8 @@ html {
     background: rgba(0, 0, 0, 0.8);
     border: none;
     color: white;
-    padding: 10px 15px;
-    font-size: 22px;
+    padding: 1vw 1vw;
+    font-size: 3vw;
     cursor: pointer;
     z-index: 10;
     border-radius: 50%;
@@ -78,7 +77,8 @@ button {
     cursor: pointer;
 }
 
-.content {
+.content,
+.content2 {
     background: rgba(0, 0, 0, 0.4);
     text-align: center;
     padding: 1vw;
@@ -153,7 +153,6 @@ footer {
 
 #copy {
     border-style: none;
-    margin-bottom: 2px;
     padding-bottom: 1vw;
 }
 
@@ -192,7 +191,7 @@ footer a:hover {
 #boton3,
 #boton4,
 #boton5 {
-    padding: 1vw 3vw;
+    padding: 0.5vw 2vw;
     margin: 0 0.8vw;
     font-size: 2.5vw;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
@@ -209,13 +208,13 @@ footer a:hover {
 }
 
 .boton-activo {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 .boton-inactivo {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 #inventario_contenedor {
@@ -223,7 +222,6 @@ footer a:hover {
     gap: 1vw;
     flex-wrap: wrap;
     justify-content: center;
-    font-size: 2.2vw;
     margin: 2vw 0 2vw 0;
 }
 
@@ -259,6 +257,7 @@ footer a:hover {
     width: 4vw;
     height: 4vw;
     margin: 0 8.5vw;
+    font-size: 2.5vw;
 }
 
 #cantidad {
@@ -267,7 +266,8 @@ footer a:hover {
 
 #carrito-flotante {
     position: fixed;
-    bottom: 9vw;
+    text-align: center;
+    bottom: 1vw;
     right: 1.5vw;
     width: 20vw;
     max-height: 30vw;
@@ -282,8 +282,8 @@ footer a:hover {
 
 #carrito-flotante h3 {
     margin: 1vw 0;
+    color: black;
     font-size: 2.5vw;
-    text-align: center;
 }
 
 .item-carrito {
@@ -297,6 +297,7 @@ footer a:hover {
     display: block;
     margin: 0 1.2vw;
     padding: 1.3vw;
+    font-size: 2vw;
     background: #25D366;
     color: white;
     text-align: center;
@@ -308,3 +309,157 @@ footer a:hover {
 #whatsapp-btn:hover {
     background: #20b358;
 }
+
+/*pantallas chicas*/
+@media (max-width:700px) {
+    .menu-btn {
+        top: 2vw;
+        left: 2vw;
+        padding: 1vw 1vw;
+        font-size: 4.5vw;
+    }
+
+    .video-container {
+        top: 20%;
+        left: 50%;
+    }
+
+    .video {
+        width: 100%;
+        height: 100%;
+    }
+
+    nav {
+        left: -190vw;
+        top: 0;
+        height: 100%;
+        width: 35vw;
+        padding-top: 7vw;
+    }
+
+    nav img {
+        width: 13vw;
+        margin-bottom: 3vw;
+        border-radius: 50%;
+    }
+
+    nav a {
+        margin: 2vw 0;
+        font-size: 4vw;
+    }
+
+    button {
+        font-size: 2.5vw;
+    }
+
+    .content {
+        padding: 0;
+        height: 60vw;
+    }
+
+    .content2 {
+        padding: 2vw;
+    }
+
+    h1 {
+        font-size: 4.5vw;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+
+    .logo {
+        width: 25vw;
+        margin: 1vw;
+    }
+
+    #nosotros {
+        margin: 2vw 0 2.2vw 4.5vw;
+        width: 90%;
+        border-radius: 3vw;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    #nosotros img {
+        margin-top: 7vw;
+    }
+
+    footer {
+        font-size: 3vw;
+        padding: 0.2vw 0 1.5vw 0;
+    }
+
+    #copy {
+        margin-bottom: 2px;
+        padding-bottom: 1vw;
+    }
+
+    #video {
+        width: 100vw;
+        height: 35vw;
+    }
+
+    #sound-btn {
+        position: absolute;
+        top: 55vw;
+        left: 38vw;
+    }
+
+    .boton {
+        padding: 2vw 0 0 0;
+    }
+
+    #boton1,
+    #boton2,
+    #boton3,
+    #boton4,
+    #boton5 {
+        padding: 0.5vw 2vw;
+        margin: 0 0.2vw;
+        font-size: 3vw;
+    }
+
+    #inventario_contenedor {
+        margin: 2vw 0 2vw 0;
+    }
+
+    .inventario {
+        width: 48vw;
+        height: 40vw;
+        font-size: 2.9vw;
+    }
+
+    /*794x963*/
+    .foto img {
+        width: 22vw;
+        height: 28vw;
+        margin: 5vw 0 0 0;
+    }
+
+    .inventario input {
+        width: 7vw;
+        height: 6vw;
+        font-size: 3vw;
+    }
+
+    #carrito-flotante {
+        bottom: 1vw;
+        width: 30vw;
+    }
+
+    #carrito-flotante h3 {
+        margin: 1vw 0;
+        font-size: 3vw;
+    }
+
+    .item-carrito {
+        font-size: 3vw;
+    }
+}
+
+/*pantallas grandes*/
+@media (min-width:1600px) {}
